@@ -1,28 +1,25 @@
-REMIX DEFAULT WORKSPACE
+# Kinetic Token (KNTC) - ERC-20 Token Implementation
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+Welcome to the Kinetic Token (KNTC) repository! This repository contains a simple ERC-20 token contract implemented using Remix IDE. The Kinetic Token allows minting, burning, and transferring tokens. Follow the steps below to get started and understand how to use the token.
 
-This workspace contains 3 directories:
+## Getting Started
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+1.Open Remix IDE: Visit the Remix IDE using your web browser at https://remix.ethereum.org/.
 
-SCRIPTS
+2.Import the Contract: In Remix, click on the "+" icon on the left sidebar, and select "File". Copy and paste the contents of KineticToken.sol into the code editor.
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+3.Compile the Contract: Go to the "Solidity Compiler" tab in Remix, select the appropriate compiler version, and click "Compile KineticToken.sol".
 
-For the deployment of any other contract, just update the contract's name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+4.Deploy the Contract: Go to the "Deploy & Run Transactions" tab. Select the KineticToken contract from the dropdown, set the initial supply, and click "Deploy".
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+5.Connect MetaMask: If you haven't already, connect your MetaMask wallet to Remix by clicking "Connect to a Web3 provider" and authorizing the connection.
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+6.Interact with the Contract: Once the contract is deployed, you can interact with it using the functions defined in the contract. You can mint tokens, burn tokens, and transfer tokens to other addresses.
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+##Functions and Usage
+
+1.Mint Tokens: To mint tokens to a specific address, call the mint function, providing the recipient's address and the amount of tokens to mint.
+
+2.Burn Tokens: To burn (destroy) tokens from your own address, call the burn function with the amount of tokens you want to burn.
+
+3.Transfer Tokens: Use the standard ERC-20 transfer function to transfer tokens from your address to another address.
